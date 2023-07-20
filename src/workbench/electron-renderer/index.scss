@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+.d-flex {
+  display: flex;
+}
+.windowActionWrap {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  .window-left {
+    flex: 1;
+    -webkit-app-region: drag;
+  }
+  .window-right {
+    height: 34px;
+  }
+}

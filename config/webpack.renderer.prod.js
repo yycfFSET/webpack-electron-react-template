@@ -7,7 +7,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(commonConfig, {
   target: 'electron-renderer',
-  entry: { renderer: './src/workbench/electron-render/index.tsx' },
+  entry: { renderer: './src/workbench/electron-renderer/index.tsx' },
   optimization: {
     minimizer: [
       // Webpack5 之后，约定使用 `'...'` 字面量保留默认 `minimizer` 配置

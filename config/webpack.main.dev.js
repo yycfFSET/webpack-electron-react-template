@@ -24,5 +24,6 @@ module.exports = merge(commonConfig, {
     // 用于配置与 HMR 强相关的开发服务器功能
     compress: true, //启动压缩 gzip
     open: true // 启动之后自动打开浏览器
-  }
+  },
+  watch: true
 });

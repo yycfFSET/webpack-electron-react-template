@@ -9,7 +9,7 @@ node_modules
 /integration-test/dist
 /tmp
 /out-tsc
-/electron-build
+/release
 
 # dependencies
 /node_modules
@@ -48,3 +48,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# e2e videos
+cypress/videos/*

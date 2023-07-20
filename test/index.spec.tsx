@@ -1,4 +1,4 @@
-import { App } from 'src/workbench/electron-render/index';
+import { App } from 'src/workbench/electron-renderer';
 import { create } from 'react-test-renderer';
 import React from 'react';
 describe('render App test', () => {

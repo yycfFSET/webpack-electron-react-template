@@ -9,7 +9,7 @@ const path = require('path');
 // . DefinePlugin 用来设置模块内的全局变量
 module.exports = merge(commonConfig, {
   target: 'electron-renderer',
-  entry: { renderer: './src/workbench/electron-render/index.tsx' },
+  entry: { renderer: './src/workbench/electron-renderer/index.tsx' },
   cache: {
     //Webpack 5 之后，该项用于控制如何缓存编译过程信息与编译结果
     // 不要使用cnpm 来安装模块 会有问题
