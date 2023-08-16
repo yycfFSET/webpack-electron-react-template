@@ -1,9 +1,9 @@
 appId: com.ichoice.yycf
-productName: yycf
+productName: yanyunchangfeng
 # artifactName: ${productName}-${version}-${env.BUILD_OPTION}-${env.RELEASE_TYPE}-${env.CUSTOM}-${env.CI_PIPELINE_ID}.exe
 directories:
   buildResources: resources
-  output: electron-build
+  output: release
 files:
   - package.json
   - dist

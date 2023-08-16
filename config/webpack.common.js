@@ -28,7 +28,7 @@ const webpackConfig = {
   // entry: {
   //   main: './src/index.tsx'
   // },
-  devtool: isDev ? 'source-map' : false, //用于配置产物 Sourcemap 生成规则
+  devtool: isDev ? 'cheap-module-source-map' : false, //用于配置产物 Sourcemap 生成规则
   output: !UMD_LIBRARY
     ? {
         // 配置产物输出路径、名称等；

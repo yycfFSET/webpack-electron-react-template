@@ -7,7 +7,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(commonConfig, {
   target: 'electron-renderer',
-  entry: { renderer: './src/workbench/electron-renderer/index.tsx' },
+  entry: {
+    renderer: './src/workbench/electron-renderer/index.tsx',
+    modal: 'src/platform/modal/ModalEntry.tsx'
+  },
   optimization: {
     minimizer: [
       // Webpack5 之后，约定使用 `'...'` 字面量保留默认 `minimizer` 配置
@@ -40,6 +43,12 @@ module.exports = merge(commonConfig, {
       template: path.join(process.cwd(), 'src/index.html'),
       filename: 'index.html',
       chunks: ['renderer'], // 指定包含的代码块
+      favicon: path.join(process.cwd(), 'src/assets/img/yanyunchangfeng.png')
+    }),
+    new htmlWebpackPlugin({
+      template: path.join(process.cwd(), 'src/index.html'),
+      filename: 'modal.html',
+      chunks: ['modal'], // 指定包含的代码块
       favicon: path.join(process.cwd(), 'src/assets/img/yanyunchangfeng.png')
     })
   ],

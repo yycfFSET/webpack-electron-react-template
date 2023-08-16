@@ -1,6 +1,13 @@
+html,
+body,
+#root,
+.container {
+  height: 100%;
+}
 body {
   margin: 0;
 }
+
 .d-flex {
   display: flex;
 }
@@ -18,4 +25,7 @@ body {
   .window-right {
     height: 34px;
   }
+}
+.container-home {
+  width: 100%;
 }
