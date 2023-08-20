@@ -6,10 +6,7 @@ import Modal from 'src/workbench/electron-renderer/components/modal';
 document.body.innerHTML = `<div id="root"></div>`;
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
-const bc = new BroadcastChannel('example-channel');
-bc.onmessage = (e) => {
-  alert(e.data);
-};
+
 const modalWindows = {
   ModalEditor: Modal
 };

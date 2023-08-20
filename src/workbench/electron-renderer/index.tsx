@@ -10,10 +10,12 @@ import EnvironmentService from 'src/platform/modal/environment/common/Environmen
 document.body.innerHTML = `<div id="root"></div>`;
 
 const environmentService = useService(EnvironmentService);
-
-const channel = new BroadcastChannel('example-channel');
-const pMsg = (msg: string = 'hello broadcastChannel') => {
-  channel.postMessage(msg);
+const rendererChannel = new BroadcastChannel('renderer-channel');
+const pMsg = (msg: string = 'hello modal window') => {
+  rendererChannel.postMessage(msg);
+};
+rendererChannel.onmessage = (e) => {
+  alert(e.data);
 };
 
 const App: FC = () => {
@@ -33,7 +35,7 @@ const App: FC = () => {
           <Button type="text" icon={<CloseOutlined />} onClick={onClose}></Button>
         </div>
       </div>
-      <div className="d-flex container-home" style={{ marginTop: 34 }}>
+      <div className="d-flex container-home">
         <Button type="primary" onClick={() => pMsg()}>
           BroadcastChannel
         </Button>

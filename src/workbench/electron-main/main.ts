@@ -112,7 +112,7 @@ const requestSingleInstance = (app: App) => {
           }
         });
         notification.on('close', (event) => {
-          console.log('关闭');
+          console.log('关闭le');
           res(true);
         });
       });
