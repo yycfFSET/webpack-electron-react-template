@@ -31,31 +31,31 @@ const App: FC = () => {
     let res = await ipcRenderer.invoke('closeWin', 'c', 'd');
     console.log(res);
   };
-  useEffect(() => {
-    const obs = new MutationObserver((mutations) => {
-      mutations.forEach((mutationRecord) => {
-        const success = ['.ant-message-success'];
-        const { addedNodes, type } = mutationRecord;
-        if (type === 'childList' && addedNodes.length > 0) {
-          success.forEach((selector) => {
-            const els = document.querySelector(selector);
-            if (els) {
-              window.__toastResult = true;
-            }
-          });
-        }
-      });
-    });
-    obs.observe(document.body, { childList: true });
-    const id = setInterval(() => {
-      message.success('成功');
-    }, 3000);
+  // useEffect(() => {
+  //   const obs = new MutationObserver((mutations) => {
+  //     mutations.forEach((mutationRecord) => {
+  //       const success = ['.ant-message-success'];
+  //       const { addedNodes, type } = mutationRecord;
+  //       if (type === 'childList' && addedNodes.length) {
+  //         success.forEach((selector) => {
+  //           const els = document.querySelector(selector);
+  //           if (els) {
+  //             window.__toastResult = true;
+  //           }
+  //         });
+  //       }
+  //     });
+  //   });
+  //   obs.observe(document.body, { childList: true });
+  //   const id = setInterval(() => {
+  //     message.success('成功');
+  //   }, 3000);
 
-    return () => {
-      clearInterval(id);
-      obs.disconnect();
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(id);
+  //     obs.disconnect();
+  //   };
+  // }, []);
   return (
     <div className="d-flex container">
       <div className="windowActionWrap">

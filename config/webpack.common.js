@@ -187,13 +187,7 @@ const webpackConfig = {
         test: /\.scss|css$/,
         use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
-    ],
-    // noParse: /lodash/, //正则表达式
-    // module.noParse字段，可以用于配置哪些模块文件的内容不需要进行解析
-    // 不需要解析依赖(如无依赖)的第三方大型库等，可以通过这个字段来配置，以提高整体的构建速度
-    noParse(content) {
-      return /lodash/.test(content);
-    }
+    ]
   },
   performance: !isDev //监控产物体积
     ? {
