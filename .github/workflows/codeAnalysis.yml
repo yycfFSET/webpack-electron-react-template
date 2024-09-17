@@ -1,41 +1,37 @@
-name: Deploy
+name: Code Analysis
 
 on:
   workflow_dispatch:
   push:
+
 permissions:
   contents: write
   pages: write
   id-token: write
 
 jobs:
-  build:
-    name: deploy
+  analysis:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v3
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Test project
-        run: npm run pre-commit
+      - name: Run ESLint
+        run: yarn eslint:report
 
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy to remote gh-pages branch
+      - name: Upload ESLint report
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: eslint-report
 
       - name: Deploy to GitHub Pages
         id: deployment

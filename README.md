@@ -1,3 +1,5 @@
+![build](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template/branch/master/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template)
+
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
@@ -20,7 +22,7 @@
    yarn start-electron or npm run start-electron
 ```
 
-这是基于 webpack5,react18,electron 的配置模版 可快速搭建 React 项目 配合[cf-cli](https://github.com/yanyunchangfeng/cf-cli) 使用更佳
+这是基于 webpack5,react18,electron 的配置模版 可快速搭建 React 项目 配合[yycf-cli](https://github.com/yanyunchangfeng/yycf-cli) 使用更佳
 
 ## 系列项目
 
