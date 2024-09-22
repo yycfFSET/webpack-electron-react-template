@@ -17,6 +17,7 @@ const config: Config = {
   moduleNameMapper: {
     '^src/(.*)$': '<rootDir>/src/$1'
   },
+  modulePathIgnorePatterns: [],
   coverageReporters: ['lcov', 'html', 'text-summary'],
   testRegex: '/test/.*\\.spec\\.tsx?$',
   collectCoverageFrom: ['src/**/*']

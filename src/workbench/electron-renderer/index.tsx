@@ -6,6 +6,7 @@ import { CloseOutlined, MinusOutlined } from '@ant-design/icons';
 import { Button, message } from 'antd';
 import { ipcRenderer } from 'electron';
 import { useService } from 'src/base/common/injector';
+import { BroadcastChannel } from 'broadcast-channel';
 import EnvironmentService from 'src/platform/modal/environment/common/EnvironmentService';
 document.body.innerHTML = `<div id="root"></div>`;
 

@@ -50,10 +50,10 @@
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
     "build-umd-esm-cjs": "npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs",
     "cypress:open": "cypress open",
-    "cypress:run": "concurrently --kill-others --success=first \" npm start \"  \" wait-on http://localhost:8080 && cypress run \" ",
+    "cypress:run": "concurrently --kill-others --success=first \" npm run start-renderer \"  \" wait-on http://localhost:8080 && cypress run \" ",
     "prettier": "prettier -c --write  **/* --cache",
     "prepare": "husky install",
-    "pre-commit": "lint-staged",
+    "pre-commit": "lint-staged && npm test",
     "eslint:report": "eslint  -f html -o eslint-report/index.html || true"
   },
   "files": [
@@ -67,8 +67,8 @@
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
     "@ant-design/icons": "^5.2.4",
+    "@eslint/js": "^9.8.0",
     "@types/jest": "29.2.5",
     "@types/node": "18.11.18",
     "@types/react": "18.2.12",
@@ -82,12 +82,12 @@
     "css-loader": "6.7.1",
     "css-minimizer-webpack-plugin": "4.1.0",
     "cypress": "12.14.0",
-    "eslint": "9.x",
-    "eslint-plugin-react": "^7.35.0",
     "electron": "^25.3.0",
     "electron-builder": "^24.4.0",
     "electron-is-dev": "^2.0.0",
     "electron-log": "^4.4.8",
+    "eslint": "9.x",
+    "eslint-plugin-react": "^7.35.0",
     "fork-ts-checker-webpack-plugin": "7.2.13",
     "globals": "^15.8.0",
     "html-loader": "4.1.0",
@@ -124,6 +124,7 @@
     "webpackbar": "5.0.2"
   },
   "dependencies": {
+    "broadcast-channel": "^7.0.0",
     "inversify": "^6.0.1",
     "inversify-inject-decorators": "^3.1.0",
     "reflect-metadata": "^0.1.13"
