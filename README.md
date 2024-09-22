@@ -1,4 +1,4 @@
-![build](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template/branch/master/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template)
+![build](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template/branch/main/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template)
 
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
