@@ -1,6 +1,6 @@
 {
   "name": "webpack-electron-react-template",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "this is webpack electron react template",
   "main": "dist/main.prod.js",
   "typesVersions": {
