@@ -1,3 +1,9 @@
+# [1.1.0](https://github.com/yanyunchangfeng/webpack-electron-react-template/compare/v1.0.0...v1.1.0) (2024-11-03)
+
+### Features
+
+- update config & readme ([a1a101a](https://github.com/yanyunchangfeng/webpack-electron-react-template/commit/a1a101ac9fcf0c6c8e3d2fbff403b9c4a95e6c79))
+
 # [1.1.0-rc.1](https://github.com/yanyunchangfeng/webpack-electron-react-template/compare/v1.0.0...v1.1.0-rc.1) (2024-11-03)
 
 ### Features
