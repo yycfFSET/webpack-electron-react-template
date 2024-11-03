@@ -87,7 +87,7 @@ const webpackConfig = {
   target: 'web', //用于配置编译产物的目标运行环境，支持 web、node、electron 等值，不同值最终产物会有所差异
   resolve: {
     // 用于配置模块路径解析规则，可用于帮助Webpack更精确、高效地找到指定模块
-    modules: [path.resolve('node_modules')], // 解析第三方包
+    // modules: [path.resolve('node_modules')], // 解析第三方包 (pnpm 不能用 因此注释) 或者改为 [path.resolve('node_modules'),'node_modules'],
     extensions: ['.ts', '.tsx', '.js', '.css', '.less', '.scss', '.json'], // 文件后缀名 先后顺序查找
     mainFields: ['jsnext:main', 'browser', 'module', 'main', 'style'], // 优先使用 jsnext:main 中指向的 ES6 模块化语法的文件
     mainFiles: ['index'], // 入口文件的名字 默认是index
@@ -98,7 +98,7 @@ const webpackConfig = {
   },
   resolveLoader: {
     // 用于配置解析loader时的resolve 配置,默认的配置
-    modules: [path.resolve('node_modules')],
+    // modules: [path.resolve('node_modules')],
     extensions: ['.js', '.json'],
     mainFields: ['loader', 'main']
   },

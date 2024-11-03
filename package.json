@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "this is webpack electron react template",
   "main": "dist/main.prod.js",
-  "types": "index.d.ts",
-  "engines": {
-    "node": "^14.18.0 || ^16.10.0 || >=18.10.0",
-    "yarn": ">=1.22.4 <2",
-    "npm": "Please use yarn instead of NPM to install dependencies"
-  },
   "typesVersions": {
     ">=4.2": {
       "*": [
@@ -44,7 +38,6 @@
     "clean": "rimraf ./dist",
     "clean-release": "rimraf ./release",
     "build-css": "sass ./src/index.scss ./dist/index.css",
-    "prepublishOnly": "npm run pre-commit && npm run build-umd-esm-cjs",
     "build:umd": "cross-env NODE_ENV=production UMD_LIBRARY=MyLibrary webpack build",
     "build:esm": "tsc -p tsconfig.build.json -m es6 --outDir dist/esm",
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
@@ -54,28 +47,33 @@
     "prettier": "prettier -c --write  **/* --cache",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "eslint:report": "eslint  -f html -o eslint-report/index.html || true"
+    "release": "semantic-release"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yanyunchangfeng/webpack-config-template.git"
+    "url": "https://github.com/yanyunchangfeng/webpack-electron-react-template.git"
   },
   "keywords": [],
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
   "license": "MIT",
   "devDependencies": {
-    "@ant-design/icons": "^5.2.4",
-    "@eslint/js": "^9.8.0",
+    "semantic-release": "24.1.2",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.0",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/npm": "12.0.1",
+    "@semantic-release/release-notes-generator": "14.0.1",
+    "@ant-design/icons": "5.2.4",
     "@types/jest": "29.2.5",
     "@types/node": "18.11.18",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
     "@types/react-test-renderer": "18.0.0",
     "@types/webpack-env": "1.16.3",
-    "antd": "^5.8.1",
+    "antd": "5.8.1",
     "concurrently": "8.2.0",
     "copy-webpack-plugin": "10.2.4",
     "cross-env": "7.0.3",
@@ -86,10 +84,7 @@
     "electron-builder": "^24.4.0",
     "electron-is-dev": "^2.0.0",
     "electron-log": "^4.4.8",
-    "eslint": "9.x",
-    "eslint-plugin-react": "^7.35.0",
     "fork-ts-checker-webpack-plugin": "7.2.13",
-    "globals": "^15.8.0",
     "html-loader": "4.1.0",
     "html-minimizer-webpack-plugin": "4.1.0",
     "html-webpack-plugin": "5.5.0",
@@ -113,7 +108,6 @@
     "ts-loader": "9.2.8",
     "ts-node": "10.9.1",
     "typescript": "5.1.3",
-    "typescript-eslint": "^7.17.0",
     "unused-webpack-plugin": "2.4.0",
     "wait-on": "7.0.1",
     "webpack": "5.71.0",
