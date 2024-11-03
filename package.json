@@ -118,10 +118,10 @@
     "webpackbar": "5.0.2"
   },
   "dependencies": {
-    "broadcast-channel": "^7.0.0",
-    "inversify": "^6.0.1",
-    "inversify-inject-decorators": "^3.1.0",
-    "reflect-metadata": "^0.1.13"
+    "broadcast-channel": "7.0.0",
+    "inversify": "6.0.1",
+    "inversify-inject-decorators": "3.1.0",
+    "reflect-metadata": "0.1.13"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

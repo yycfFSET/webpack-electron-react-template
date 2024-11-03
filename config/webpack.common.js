@@ -9,6 +9,7 @@ const UnusedWebpackPlugin = require('unused-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const webpackBar = require('webpackbar');
+
 const { NODE_ENV, ANALYZE, UNUSED, UMD_LIBRARY, SMP } = process.env;
 const isDev = NODE_ENV === 'development',
   isAnalyzerMode = ANALYZE === '1',
@@ -24,7 +25,7 @@ class NoopPlugin {
 }
 const webpackConfig = {
   context: process.cwd(), // 项目执行上下文路径；
-  mode: process.env.NODE_ENV, //编译模式短语，支持 development、production 等值，可以理解为一种声明环境的短语
+  mode: NODE_ENV, //编译模式短语，支持 development、production 等值，可以理解为一种声明环境的短语
   // entry: {
   //   main: './src/index.tsx'
   // },

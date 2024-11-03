@@ -1,5 +1,7 @@
 [![build](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/test.yml/badge.svg)](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/test.yml/?query=branch:main) [![codecov](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template/branch/main/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/webpack-electron-react-template) [![Deploy](https://github.com/yanyunchangfeng/webpack-electron-react-template/workflows/Deploy/badge.svg)](https://github.com/yanyunchangfeng/webpack-electron-react-template/actions/workflows/deploy.yml)
 
+[![npm latest version](https://img.shields.io/npm/v/webpack-electron-react-template/latest.svg)](https://www.npmjs.com/package/webpack-electron-react-template)
+
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
@@ -12,8 +14,8 @@
 ## 用法
 
 ```
-   yarn
-   yarn start-electron or npm run start-electron
+   pnpm i
+   pnpm start-electron
 ```
 
 这是基于 webpack5,react18,electron 的配置模版 可快速搭建 React 项目 配合[yycf-cli](https://github.com/yanyunchangfeng/yycf-cli) 使用更佳
@@ -33,20 +35,20 @@
 ## 单元测试
 
 ```
-   yarn test or npm  test
+   pnpm test
 ```
 
 ## 端到端测试
 
 ```
-   yarn cypress:open or  npm run cypress:open
-   yarn cypress:run or  npm run cypress:run
+   pnpm cypress:open
+   pnpm cypress:run
 ```
 
 ## 打包 electron 应用
 
 ```
-   yarn package-mac or npm run package-mac
+   pnpm package-mac
 ```
 
 ## 社交主页

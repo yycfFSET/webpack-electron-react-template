@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       broadcast-channel:
-        specifier: ^7.0.0
+        specifier: 7.0.0
         version: 7.0.0
       inversify:
-        specifier: ^6.0.1
-        version: 6.0.3
+        specifier: 6.0.1
+        version: 6.0.1
       inversify-inject-decorators:
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0
       reflect-metadata:
-        specifier: ^0.1.13
-        version: 0.1.14
+        specifier: 0.1.13
+        version: 0.1.13
     devDependencies:
       '@ant-design/icons':
         specifier: 5.2.4
@@ -2758,8 +2758,8 @@ packages:
   inversify-inject-decorators@3.1.0:
     resolution: {integrity: sha512-/seBlVp5bXrLQS3DpKEmlgeZL6C7Tf/QITd+IMQrbBBGuCbxb7k3hRAWu9XSreNpFzLgSboz3sClLSEmGwHphw==}
 
-  inversify@6.0.3:
-    resolution: {integrity: sha512-s/svzcRQ/scaGUUyaVtFSL1dvOaRgyvE7VvpGcJwXmFz7CCzfSfxC/Uyl7iSHDEmBabJ2gbDES72DaygtMmwvg==}
+  inversify@6.0.1:
+    resolution: {integrity: sha512-B3ex30927698TJENHR++8FfEaJGqoWOgI6ZY5Ht/nLUsFCwHn6akbwtnUAPCgUepAnTpe2qHxhDNjoKLyz6rgQ==}
 
   ipaddr.js@1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
@@ -4454,8 +4454,8 @@ packages:
     resolution: {integrity: sha512-/njmZ8s1wVeR6pjTZ+0nCnv8SpZNRMT2D1RLOJQESlYFDBvwpTA4KWJpZ+sBJ4+vhjILRcK7JIFdGCdxEAAitg==}
     engines: {node: '>= 0.10'}
 
-  reflect-metadata@0.1.14:
-    resolution: {integrity: sha512-ZhYeb6nRaXCfhnndflDK8qI6ZQ/YcWZCISRAWICW9XYqMUwjZM9Z0DveWX/ABN01oxSHwVxKQmxeYZSsm0jh5A==}
+  reflect-metadata@0.1.13:
+    resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
 
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
@@ -8722,7 +8722,7 @@ snapshots:
 
   inversify-inject-decorators@3.1.0: {}
 
-  inversify@6.0.3: {}
+  inversify@6.0.1: {}
 
   ipaddr.js@1.9.1: {}
 
@@ -10541,7 +10541,7 @@ snapshots:
     dependencies:
       resolve: 1.22.8
 
-  reflect-metadata@0.1.14: {}
+  reflect-metadata@0.1.13: {}
 
   regenerator-runtime@0.14.1: {}
 
